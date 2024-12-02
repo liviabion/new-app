@@ -20,18 +20,18 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editTextNumberSigned"
+        android:id="@+id/primeiroNumero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberSigned" />
+        android:inputType="numberDecimal" />
 
     <EditText
-        android:id="@+id/editTextNumberSigned2"
+        android:id="@+id/segundoNumero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberSigned" />
+        android:inputType="numberDecimal" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,28 +40,37 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/soma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SOMA" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/subtracao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SUB" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/multiplicacao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MULT" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/divisao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DIV" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:text="Resultado" />
+
 </LinearLayout>
