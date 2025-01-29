@@ -1,6 +1,7 @@
 package bion.lima.livia.myfirstproject;
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -45,5 +46,37 @@ class CalculatorActivity : ComponentActivity() {
             binding.resultado.text = div.toString()
         }
 
+        Log.i("TEST", "onCreate")
+
+    }
+
+    override fun onStart(){
+        super.onStart()
+
+        Log.i("TEST", "onStart")
+    }
+
+    override fun onResume(){
+        super.onResume()
+
+        Log.i("TEST", "onResume")
+    }
+
+    override fun onStop(){
+        super.onStop()
+
+        Log.i("TEST", "onStop")
+    }
+
+    override fun onDestroy(){
+        super.onDestroy()
+
+        Log.i("TEST", "onDestroy")
+    }
+
+    override fun onPause(){
+        super.onPause()
+
+        Log.i("TEST", "onPause")
     }
 }
