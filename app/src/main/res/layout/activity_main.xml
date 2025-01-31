@@ -10,20 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="51dp"
         android:gravity="center"
-        android:text="Oi"
+        android:text="Price Comparator"
         android:textSize="25sp" />
 
     <Button
-        android:id="@+id/changeButton"
+        android:id="@+id/navButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Change" />
+        android:text="Lets Compare" />
 
-    <Button
-        android:id="@+id/unchangeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Unchange" />
 </LinearLayout>

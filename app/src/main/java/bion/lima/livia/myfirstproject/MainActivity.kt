@@ -15,6 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import bion.lima.livia.myfirstproject.databinding.ActivityMainBinding
 import bion.lima.livia.myfirstproject.ui.theme.MyFirstProjectTheme
+import android.util.Log
+import android.content.Intent
 
 class MainActivity : ComponentActivity() {
 
@@ -24,16 +26,45 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        setContentView(R.layout.activity_main)
-//        val textView = findViewById<TextView>(R.id.textView)
-//        val changeButton: Button = findViewById(R.id.changeButton)
 
-        binding.unchangeButton.setOnClickListener(){
-            binding.textView.text = "Oiii"
+        binding.navButton.setOnClickListener { v ->
+            val intent =
+                Intent(
+                    this@MainActivity,
+                    ThirdActivity::class.java
+                )
+            intent.putExtra("data", "blah")
+            startActivity(intent)
         }
+    }
 
-//        changeButton.setOnClickListener(){
-//            textView.text = "Oi, Lívia!"
-//        }
+    override fun onStart() {
+        super.onStart()
+
+        Log.i("TEST", "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        Log.i("TEST", "onResume")
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        Log.i("TEST", "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        Log.i("TEST", "onDestroy")
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        Log.i("TEST", "onPause")
     }
 }
